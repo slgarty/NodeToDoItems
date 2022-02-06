@@ -1,0 +1,17 @@
+<div class="row">
+    <a href='/toDoItems/addCategory' class='btn btn-primary btn-block'>Add Category</a>
+    <table class='table table-hover table-striped table-bordered'>
+        <tr>
+            <th>Category Name</th>          
+            <th>Edit</th>
+        </tr>
+        <% for(let i=0; i < categories.length; i++) { %>
+            <tr>
+                <td><%= categories[i].Name %></td>
+                <td>
+                    <a href='/toDoItems/editCategory?id=<%= categories[i].Id %>' class='btn btn-warning'>Edit</a>
+                </td>
+            </tr>
+        <%}%> 
+    </table>
+</div>

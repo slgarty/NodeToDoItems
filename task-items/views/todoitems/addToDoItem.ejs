@@ -1,0 +1,22 @@
+<div class="row">
+    <div class='col-md-6 offset-md-3 card card-body bg-light'>
+        <form method='post' action='/todoitems/saveToDoItem'>
+            <input type='text' name='title' class='form-control' placeholder="To Do Item" />
+            <br />
+            <input id="date" type="date" class="form-control form-control-lg" name='dueDate' class='form-control' placeholder="DueDate" />
+            <br />
+            <div class="form-group">
+                <label for="categoryid">Category:</label>
+                <select id="categoryId" class="form-control form-control-lg" name="categoryId">
+                    <% for(let i=0; i < categories.length; i++) { %>
+                    {
+                        <option value="<%= categories[i].Id %>"><%= categories[i].Name %></option>
+                    }
+                    <%}%>
+                </select>
+            </div>
+            <button class="btn btn-primary btn-block">Save</button>
+        </form>
+    </div>
+</div>
+
